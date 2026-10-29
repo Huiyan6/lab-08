@@ -15,9 +15,17 @@ class Wizard(val name: String, var mana: Int, var spellPower: Int) {
                     return spellPower * 2
                 } else return 0 // not enough mana
             }
+            "Fireball" -> {
+                if (mana >= 15){
+                    mana -= 15
+                    return spellPower * 5
+                }
+                else return 0 // not enough mana
+            }
             else -> {
                 return 0 // invalid spell
             }
         }
+
     }
 }
